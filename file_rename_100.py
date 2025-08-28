@@ -21,4 +21,4 @@ def rename_files_with_suffix(folder_path):
 
 
 # 👉 Replace with your folder path
-rename_files_with_suffix(r"C:\Users\maste\Documents\Arpit\automation-scripts\New folder")
+rename_files_with_suffix(r"C:\Users\maste\Documents\Arpit\automation-scripts\renamed")
