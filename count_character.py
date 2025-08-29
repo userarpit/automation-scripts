@@ -1,3 +1,5 @@
+#! python3
+
 import pprint
 user_string = input("Enter a string: ")
 
@@ -7,4 +9,4 @@ for char in user_string.lower():
     char_counts[char] += 1
 
 # pprint.pprint(char_counts)
-pprint.pformat(char_counts)
+pprint.pprint(char_counts)
