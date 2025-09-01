@@ -1,6 +1,8 @@
-**phone_number_scrap.py** -> Copy the document on the clipboard, and then just the run this script. 
-This script will take the data from clipboard, and then scrap email and phone number, and then copy them back to clipboard.
+Project: **Phone Number & Email Scraper**
+The Phone Number & Email Scraper is a simple Python script that extracts contact details directly from your clipboard. Just copy any document or text containing emails and phone numbers, then run the script — it will scan the clipboard content, extract valid phone numbers and email addresses, and copy them back to your clipboard for easy reuse. This makes it a quick utility for cleaning and retrieving contact information without manual effort.
 
-**file_organizer** -> select the folder to be organized; then select organize by option: File Type, Date created, File size; then click "Run Organizer". the files in the folder will be organized accordingly; There is undo option also, which will UNDO the last changes; the actions will be logged in "Log Output" textbox; The log can be reset also by using the button "reset log" button. The Logs will also be stored in a log file on the same folder, from where the script is running.
+Project: **File Organizer**
+The File Organizer is a Python desktop application built with Tkinter that helps automate folder organization. Users can select a folder, choose whether to organize files by type, date created, or file size, and then run the organizer to neatly arrange everything into subfolders. An undo feature allows reverting the last changes, while a built-in log panel displays real-time actions. Logs can be reset from the interface and are also saved as a log file in the same directory for future reference.
 
-**scrap_data_generate_report.py** -> scrap a website, and extract the books details (Title, Rating, Price, Availability), from each page (apply pagination logic), and then saved the details into an Excel file, and finally send them through email (from one account to other).
+Project: **Automated Web Scraper & Report Generator**
+Developed a Python automation pipeline that scrapes multi-page book catalog data (title, price, rating, stock) from Books to Scrape. The data is cleaned and exported into Excel, then automatically emailed as a daily report to stakeholders. The project demonstrates practical skills in web scraping, data transformation, Excel automation, and email integration — applicable to e-commerce, product monitoring, and job listing platforms.
