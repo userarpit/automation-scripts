@@ -1,2 +1,4 @@
 **phone_number_scrap.py** -> Copy the document on the clipboard, and then just the run this script. 
 This script will take the data from clipboard, and then scrap email and phone number, and then copy them back to clipboard.
+
+**file_organizer** -> select the folder to be organized; then select organize by option: File Type, Date created, File size; then click "Run Organizer". the files in the folder will be organized accordingly; There is undo option also, which will UNDO the last changes; the actions will be logged in "Log Output" textbox; The log can be reset also by using the button "reset log" button. The Logs will also be stored in a log file on the same folder, from where the script is running. 
