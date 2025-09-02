@@ -9,3 +9,9 @@ The File Organizer is a Python desktop application built with Tkinter that helps
 Project: **Automated Web Scraper & Report Generator** (scrap_data_generate_report.py)
 
 Developed a Python automation pipeline that scrapes multi-page book catalog data (title, price, rating, stock) from Books to Scrape. The data is cleaned and exported into Excel, then automatically emailed as a daily report to stakeholders. The project demonstrates practical skills in web scraping, data transformation, Excel automation, and email integration — applicable to e-commerce, product monitoring, and job listing platforms.
+
+Project: **Git Automation with PyAutoGUI & OCR**
+
+This project automates Git operations using PyAutoGUI for keyboard/mouse control and Pytesseract for OCR-based screen reading.
+It opens a terminal, checks repository status, and automatically runs git add, git commit, and git push when changes are detected.
+The script smartly waits until push completion by reading terminal output with OCR before showing success messages.
