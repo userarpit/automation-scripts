@@ -19,7 +19,6 @@ async def main():
     await write("cmd", 0.3)
     time.sleep(1)
     await write(["alt", "space", "x"], type="h")
-    # time.sleep(2)
     await write("cd Documents", 0.1)
     await write("cd Arpit", 0.1)
     await write("cd automation-scripts", 0.1)
@@ -50,12 +49,18 @@ async def main():
         time.sleep(1)
         pyautogui.press("backspace", presses=len(msg), interval=0.1)
 
-        msg = "bye"
+    else:
+        msg = "There is nothing to add and commit"
         pyautogui.write(msg, interval=0.2)
-        time.sleep(2)
+        time.sleep(1)
         pyautogui.press("backspace", presses=len(msg), interval=0.1)
 
-        await write("exit", 0.3)
+    msg = "bye"
+    pyautogui.write(msg, interval=0.2)
+    time.sleep(1)
+    pyautogui.press("backspace", presses=len(msg), interval=0.1)
+
+    await write("exit", 0.3)
 
 
 if __name__ == "__main__":
