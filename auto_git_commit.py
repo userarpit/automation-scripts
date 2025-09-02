@@ -51,7 +51,7 @@ async def main():
 
     else:
         msg = "There is nothing to add and commit"
-        pyautogui.write(msg, interval=0.2)
+        pyautogui.write(msg, interval=0.1)
         time.sleep(1)
         pyautogui.press("backspace", presses=len(msg), interval=0.1)
 
