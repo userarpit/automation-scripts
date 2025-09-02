@@ -35,7 +35,7 @@ async def main():
     text = pytesseract.image_to_string(screenshot)
     time.sleep(1)
     print("Extracted Text:", text)
-    if "Untracked files" in text:
+    if not ("nothing to commit" in text):
         msg = "There is something to add and commit"
         pyautogui.write("There is something to add and commit", interval=0.1)
         time.sleep(1)
