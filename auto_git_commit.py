@@ -4,17 +4,23 @@ import pytesseract
 import asyncio
 
 
+async def write(action, interval=0.5):
+    pyautogui.write(action, interval=interval)
+    time.sleep(0.5)
+    pyautogui.hotkey("enter")
+
+
 async def main():
     pyautogui.hotkey("win", "r")
     time.sleep(1)
-    await do_action("cmd", 0.3)
+    await write("cmd", 0.3)
     time.sleep(1)
     pyautogui.hotkey("alt", "space", "x")
     time.sleep(1)
-    await do_action("cd Documents", 0.1)
-    await do_action("cd Arpit", 0.1)
-    await do_action("cd automation-scripts", 0.1)
-    await do_action("git status", 0.1)
+    await write("cd Documents", 0.1)
+    await write("cd Arpit", 0.1)
+    await write("cd automation-scripts", 0.1)
+    await write("git status", 0.1)
 
     pytesseract.pytesseract.tesseract_cmd = (
         r"C:\Program Files\Tesseract-OCR\tesseract.exe"
@@ -32,16 +38,12 @@ async def main():
         time.sleep(1)
         pyautogui.press("backspace", presses=len(msg), interval=0.1)
 
-        await do_action("git add .", 0.1)
-        await do_action("git commit -m 'update'", 0.1)
-        await do_action("git push origin main", 0.1)
-        await do_action("bye", 0.1)
-        await do_action("exit",0.1)
-
-async def do_action(action, interval=0.5):
-    pyautogui.write(action, interval=interval)
-    time.sleep(0.5)
-    pyautogui.hotkey("enter")
+        await write("git add .", 0.1)
+        await write("git commit -m 'update'", 0.1)
+        await write("git push origin main", 0.1)
+        await write("bye", 0.5)
+        # time.sleep(1)
+        await write("exit", 0.5)
 
 
 if __name__ == "__main__":
