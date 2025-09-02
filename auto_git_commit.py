@@ -3,6 +3,7 @@ import time
 import pytesseract
 import asyncio
 
+
 async def main():
     pyautogui.hotkey("win", "r")
     time.sleep(0.8)
@@ -32,22 +33,22 @@ async def main():
 
     # Use OCR to extract text
     text = pytesseract.image_to_string(screenshot)
-
-    # print("Extracted Text:", text)
+    time.sleep(1)
+    print("Extracted Text:", text)
     if "Untracked files" in text:
         msg = "There is something to add and commit"
         pyautogui.write("There is something to add and commit", interval=0.1)
         time.sleep(1)
         pyautogui.press("backspace", presses=len(msg), interval=0.1)
 
-        await git_action("git add .")
-        await git_action("git commit -m 'update'")
-        await git_action("git push origin main")
+        await do_action("git add .")
+        await do_action("git commit -m 'update'")
+        await do_action("git push origin main")
 
 
-async def git_action(action):
-    pyautogui.write(action)
-    time.sleep(1)
+async def do_action(action, interval=0.5):
+    pyautogui.write(action, interval=interval)
+    time.sleep(1.5)
     pyautogui.hotkey("enter")
 
 
