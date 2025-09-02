@@ -4,19 +4,20 @@ import pytesseract
 import asyncio
 
 
-async def write(action, interval=0.5):
-    pyautogui.write(action, interval=interval)
-    time.sleep(0.5)
-    pyautogui.hotkey("enter")
+async def write(action, interval=0.5, type="k"):
+    if type == "h":
+        pyautogui.hotkey(action)
+        time.sleep(1)
+    else:
+        pyautogui.write(action, interval=interval)
+        time.sleep(0.5)
+        pyautogui.hotkey("enter")
 
 
 async def main():
-    pyautogui.hotkey("win", "r")
-    time.sleep(1)
+    await write(["win", "r"], type="h")
     await write("cmd", 0.3)
-    time.sleep(1)
-    pyautogui.hotkey("alt", "space", "x")
-    time.sleep(1)
+    await write(["alt", "space", "x"], type="h")
     await write("cd Documents", 0.1)
     await write("cd Arpit", 0.1)
     await write("cd automation-scripts", 0.1)
