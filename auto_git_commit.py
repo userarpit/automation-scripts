@@ -30,7 +30,7 @@ async def main():
 
     # Use OCR to extract text
     text = pytesseract.image_to_string(screenshot)
-    time.sleep(1)
+    time.sleep(0.5)
 
     if "nothing to commit" not in text:
         msg = "There is something to add and commit"
@@ -47,7 +47,7 @@ async def main():
         time.sleep(2)
         pyautogui.press("backspace", presses=len(msg), interval=0.1)
 
-        # await write("exit", 0.5)
+        await write("exit", 0.5)
 
 
 if __name__ == "__main__":
