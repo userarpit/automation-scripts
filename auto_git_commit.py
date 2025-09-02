@@ -5,24 +5,20 @@ import asyncio
 
 
 async def main():
-    # await do_action("git add .", 0.1)
     pyautogui.hotkey("win", "r")
-    time.sleep(0.8)
+    time.sleep(1)
     await do_action("cmd", 0.3)
-    # pyautogui.write("cmd", interval=0.3)
-    # pyautogui.hotkey("enter")
-    # time.sleep(1.5)
+    time.sleep(1)
     pyautogui.hotkey("alt", "space", "x")
-    time.sleep(1.2)
-    
+    time.sleep(1)    
     pyautogui.write("cd Documents", interval=0.1)
-    time.sleep(0.5)
+    time.sleep(1)
     pyautogui.hotkey("enter")
     pyautogui.write("cd Arpit", interval=0.1)
-    time.sleep(0.5)
+    time.sleep(1)
     pyautogui.hotkey("enter")
     pyautogui.write("cd automation-scripts", interval=0.1)
-    time.sleep(0.5)
+    time.sleep(1)
     pyautogui.hotkey("enter")
     pyautogui.write("git status", interval=0.1)
     time.sleep(1)
@@ -51,7 +47,7 @@ async def main():
 
 async def do_action(action, interval=0.5):
     pyautogui.write(action, interval=interval)
-    time.sleep(1.5)
+    time.sleep(0.5)
     pyautogui.hotkey("enter")
 
 
