@@ -19,9 +19,7 @@ async def main():
     await write("cmd", 0.3)
     time.sleep(1)
     await write(["alt", "space", "x"], type="h")
-    await write("cd Documents", 0.1)
-    await write("cd Arpit", 0.1)
-    await write("cd automation-scripts", 0.1)
+    await write(r"cd Documents\Arpit\automation-scripts", 0.1)
     await write("git status", 0.1)
 
     pytesseract.pytesseract.tesseract_cmd = (
