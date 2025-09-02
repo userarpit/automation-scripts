@@ -50,7 +50,12 @@ async def main():
         await write("git commit -m 'update'", 0.1)
         await write("git push origin main", 0.1)
         # sleep for 5 seconds
-        # time.sleep(5)
+        while True:
+            screenshot = pyautogui.screenshot()
+            text = pytesseract.image_to_string(screenshot)
+            if "Everything up-to-date" in text or "main -> main" in text:
+                break
+            time.sleep(1)
 
         msg = "All the files are pushed to github!"
         pyautogui.write(msg, interval=0.05)
