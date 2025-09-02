@@ -42,7 +42,7 @@ async def main():
         await write("git commit -m 'update'", 0.1)
         await write("git push origin main", 0.1)
         await write("bye", 0.5)
-        # time.sleep(1)
+        time.sleep(1)
         await write("exit", 0.5)
 
 
