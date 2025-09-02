@@ -36,14 +36,14 @@ async def main():
         msg = "There is something to add and commit"
         pyautogui.write(msg, interval=0.05)
         time.sleep(1)
-        pyautogui.press("backspace", presses=len(msg), interval=0.1)
+        pyautogui.press("backspace", presses=len(msg), interval=0.05)
 
         await write("git add .", 0.1)
         await write("git commit -m 'update'", 0.1)
         await write("git push origin main", 0.1)
         time.sleep(5)
         msg = "All the files are pushed to github!"
-        pyautogui.write(msg, interval=0.1)
+        pyautogui.write(msg, interval=0.05)
         time.sleep(1)
         pyautogui.press("backspace", presses=len(msg), interval=0.05)
 
