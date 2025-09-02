@@ -10,19 +10,11 @@ async def main():
     await do_action("cmd", 0.3)
     time.sleep(1)
     pyautogui.hotkey("alt", "space", "x")
-    time.sleep(1)    
-    pyautogui.write("cd Documents", interval=0.1)
     time.sleep(1)
-    pyautogui.hotkey("enter")
-    pyautogui.write("cd Arpit", interval=0.1)
-    time.sleep(1)
-    pyautogui.hotkey("enter")
-    pyautogui.write("cd automation-scripts", interval=0.1)
-    time.sleep(1)
-    pyautogui.hotkey("enter")
-    pyautogui.write("git status", interval=0.1)
-    time.sleep(1)
-    pyautogui.hotkey("enter")
+    await do_action("cd Documents", 0.1)
+    await do_action("cd Arpit", 0.1)
+    await do_action("cd automation-scripts", 0.1)
+    await do_action("git status", 0.1)
 
     pytesseract.pytesseract.tesseract_cmd = (
         r"C:\Program Files\Tesseract-OCR\tesseract.exe"
