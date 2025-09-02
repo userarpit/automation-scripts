@@ -25,8 +25,8 @@ async def main():
     # Use OCR to extract text
     text = pytesseract.image_to_string(screenshot)
     time.sleep(1)
-    print("Extracted Text:", text)
-    if not ("nothing to commit" in text):
+
+    if "nothing to commit" not in text:
         msg = "There is something to add and commit"
         pyautogui.write("There is something to add and commit", interval=0.1)
         time.sleep(1)
@@ -35,7 +35,8 @@ async def main():
         await do_action("git add .", 0.1)
         await do_action("git commit -m 'update'", 0.1)
         await do_action("git push origin main", 0.1)
-
+        await do_action("bye", 0.1)
+        await do_action("exit",0.1)
 
 async def do_action(action, interval=0.5):
     pyautogui.write(action, interval=interval)
