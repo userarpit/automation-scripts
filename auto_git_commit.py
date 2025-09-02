@@ -17,7 +17,7 @@ async def write(action, interval=0.5, type="k"):
 async def main():
     await write(["win", "r"], type="h")
     await write("cmd", 0.3)
-    time.sleep(2)
+    time.sleep(1)
     await write(["alt", "space", "x"], type="h")
     # time.sleep(2)
     await write("cd Documents", 0.1)
