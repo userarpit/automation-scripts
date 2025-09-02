@@ -49,7 +49,7 @@ async def main():
         await write("git add .", 0.1)
         await write("git commit -m 'update'", 0.1)
         await write("git push origin main", 0.1)
-        # sleep for 5 seconds
+        # take screenshot and check if the git push command completed in full 
         while True:
             screenshot = pyautogui.screenshot()
             text = pytesseract.image_to_string(screenshot)
