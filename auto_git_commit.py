@@ -44,7 +44,7 @@ async def main():
 
         msg = "bye"
         pyautogui.write(msg, interval=0.1)
-        time.sleep(1)
+        time.sleep(5)
         pyautogui.press("backspace", presses=len(msg), interval=0.1)
 
         # await write("exit", 0.5)
