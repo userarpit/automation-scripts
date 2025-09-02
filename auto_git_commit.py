@@ -47,7 +47,7 @@ async def main():
         time.sleep(1)
         pyautogui.press("backspace", presses=len(msg), interval=0.1)
 
-        await write("exit", 0.5)
+        # await write("exit", 0.5)
 
 
 if __name__ == "__main__":
